@@ -10,6 +10,7 @@ $(document).ready(function() {
 
     function initPage() {
         artCont.empty();
+        debugger;
         $.get("/api/headlines?saved=true").then(function(data){
             if (data && data.length) {
                 renderArticles(data);
@@ -97,7 +98,7 @@ $(document).ready(function() {
         $(".note-container").append(notesToRender);
     }
 
-    function handleArticleDelete() {
+    function handleArtDelete() {
         var artToDelete = $(this).parents(".panel").data();
         $.ajax({
             method: "DELETE",
@@ -109,7 +110,7 @@ $(document).ready(function() {
         });
     }
 
-    function handleArticleNotes() {
+    function handleArtNotes() {
         var currentArt = $(this).parents(".panel").data();
         $.get("/api/notes/" + currentArt._id
     ).then(function(data) {

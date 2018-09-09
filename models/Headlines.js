@@ -6,16 +6,16 @@ var Schema = mongoose.Schema;
 //create new schema that requires headline + summary
 var headlineSchema = new Schema ({
     headline: {
-        type: string,
+        type: String,
         required: true,
         //unique - to prevent scraping the same articles 
         unique: true,
     },
     summary: {
-        type: string,
+        type: String,
         required: true
     },
-    date: string,
+    date: String,
     saved: {
         type: Boolean, 
         //change to true if user saves article

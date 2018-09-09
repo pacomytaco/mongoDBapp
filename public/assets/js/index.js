@@ -38,7 +38,7 @@ $(document).ready(function() {
             "<h3>",
             article.headline,
             "<a class='btn btn-success save'>",
-            "Save Article", "</a>", "</hs>", "</div>",
+            "Save Article", "</a>", "</h3>", "</div>",
             "<div class='panel-body'>",
             article.summary, "</div>",
             "</div>"

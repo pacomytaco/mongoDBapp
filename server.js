@@ -6,7 +6,7 @@ var mongoose = require("mongoose");
 
 
 //set up port
-var PORT = process.env.PORT || 3000;
+var PORT = process.env.PORT || 3003;
 
 // instatiate express app
 var app = express();
@@ -18,7 +18,8 @@ var router = express.Router();
 require("./config/routes")(router);
 
 //set public folder as static directory
-app.use(express.static(__dirname + "/public"));
+app.use(express.static("public"));
+// app.use(express.static(__dirname + "/public"));
 
 //use bP in app
 app.use(bodyParser.urlencoded({

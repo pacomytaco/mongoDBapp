@@ -7,11 +7,11 @@ var Schema = mongoose.Schema;
 var noteSchema = new Schema ({
     //to attach note to the article
     _headlineId: {
-        type: schema.types.objectId,
+        type: Schema.Types.ObjectId,
         ref: "Headline"
     },
-    date: string,
-    noteText: string,
+    date: String,
+    noteText: String,
 });
 
 // .model() - create and read documents from db

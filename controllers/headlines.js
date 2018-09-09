@@ -3,7 +3,7 @@ var scrape = require("../scripts/scrape");
 var makeDate = require("../scripts/date");
 
 //bring in models
-var hL = require("../models/Headline");
+var Headline = require("../models/Headlines");
 
 //functionality for articles 
 module.exports = {
@@ -14,7 +14,7 @@ module.exports = {
             var articles = data;
             for (var i = 0; i < articles.length; i++) {
                 articles[i].date = makeDate();
-                articles[i].saved = fales;
+                articles[i].saved = false;
             }
 
             Headline.collection.insertMany(articles, {ordered:false}, function(err, docs) {
@@ -44,4 +44,4 @@ module.exports = {
         {}, 
         cb);
     }
-}
+};
